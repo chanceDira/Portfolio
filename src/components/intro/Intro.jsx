@@ -1,6 +1,7 @@
 import './intro.scss'
 import { init } from 'ityped'
 import { useEffect, useRef } from 'react'
+import chance from './chance.jpeg'
 
 export default function Intro() {
 
@@ -20,7 +21,7 @@ export default function Intro() {
         <div className='intro' id='intro'>
             <div className="left">
                 <div className="imageContainer">
-                    <img src="assets/chance.jpeg" alt="" />
+                    <img src={chance} alt="" />
                 </div>
             </div>
             <div className="right">
