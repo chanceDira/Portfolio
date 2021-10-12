@@ -2,19 +2,38 @@
 import './works.scss'
 
 export default function Works() {
+
+    const data = [
+        {
+            id: '1',
+            icon: 'https://cdn.pixabay.com/photo/2017/01/29/13/20/mobile-devices-2017978__340.png',
+            title: 'Website Development',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            img: 'https://cdn.pixabay.com/photo/2017/01/29/13/20/mobile-devices-2017978__340.png'
+        },
+        {
+            id: '2',
+            icon: 'https://cdn.pixabay.com/photo/2017/01/29/13/20/mobile-devices-2017978__340.png',
+            title: 'DApps Application',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            img: 'https://cdn.pixabay.com/photo/2017/01/29/13/20/mobile-devices-2017978__340.png'
+        }
+    ]
+
     return (
         <div className='works' id='works'>
             <div className="slider">
-                <div className="container">
+                {data.map(d =>(
+                    <div className="container">
                     <div className="item">
                         <div className="left">
                             <div className="leftContainer">
                                 <div className="imgContainer">
-                                    <img src="https://cdn.pixabay.com/photo/2017/01/29/13/20/mobile-devices-2017978__340.png" alt="websites" />
+                                    <img src={d.icon} alt="websites" />
                                 </div>
-                                <h2>Title</h2>
-                                <p>Le lorem ipsum est, en imprimerie, une suite de 
-                                    mots sans signification utilisée à titre provisoire pour calibrer une mise en page.
+                                <h2>{d.title}</h2>
+                                <p>
+                                    {d.desc}
                                 </p>
                                 <span>Projects</span>
                             </div>
@@ -24,6 +43,7 @@ export default function Works() {
                         </div>
                     </div>
                 </div>
+                ))}
             </div>
             <img src="https://cdn.pixabay.com/photo/2012/04/12/19/38/arrow-30330__340.png" className="arrow left" alt="" />
             <img src="https://cdn.pixabay.com/photo/2012/04/12/19/38/arrow-30330__340.png" className="arrow right" alt="" />
